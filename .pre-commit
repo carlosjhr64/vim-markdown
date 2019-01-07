@@ -21,7 +21,7 @@ unless BUILD.start_with?(build=Time.now.strftime('%y%m%d'))
   exit 1
 end
 
-unless MINOR.to_i == (minor=`egrep '\\bdef self\\.' ./lib/**.rb | wc`.to_i)
+unless MINOR.to_i == (minor=`egrep '^\s*def\\s+self\\.' ./lib/*.rb | wc`.to_i)
   puts "Unexpected MINOR(#{MINOR}) != #{minor}"
   exit 1
 end
