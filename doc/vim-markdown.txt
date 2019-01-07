@@ -1,0 +1,137 @@
+*vim-markdown.txt*
+
+
+\ \   / (_)_ __ ___                                                ~
+ \ \ / /| | '_ ` _ \                                               ~
+  \ V / | | | | | | |                                              ~
+   \_/  |_|_| |_| |_|                                              ~
+                                                                   ~
+|  \/  | __ _ _ __| | ____| | _____      ___ __                    ~
+| |\/| |/ _` | '__| |/ / _` |/ _ \ \ /\ / / '_ \                   ~
+| |  | | (_| | |  |   < (_| | (_) \ V  V /| | | |                  ~
+|_|  |_|\__,_|_|  |_|\_\__,_|\___/ \_/\_/ |_| |_|                  ~
+
+
+                  Version: 0.8.1901070
+
+====================================================================
+CONTENTS                                               *VimMarkdown*
+
+    Libraries
+        |VimMarkdown|
+        |NavigationRb|
+        |SyntaxRb|
+
+    Requires
+        |vim-markdown|
+
+    Variables
+        |VimMarkdownMetadataPlugins|
+        |VIM_MARKDOWN_DIRECTORY|
+        |$LOAD_PATH|
+
+    Functions
+        |VimMarkdown.metadata|
+        |VimMarkdown.plugins|
+        |VimMarkdown.after|
+
+====================================================================
+REQUIRES
+
+*vim-markdown*
+
+    :ruby require 'vim-markdown'
+
+    Used in [ftplugin/markdown.vim](../ftplugin/markdown.vim).
+
+    The Ruby `lib/vim-markdown.rb` file is loaded anytime Vim opens a markdown file.
+    It makes all of VimMarkdown's module functions available.
+
+====================================================================
+VARIABLES
+
+*VimMarkdownMetadataPlugins*
+
+    :echo VimMarkdownMetadataPlugins
+
+    Set in [ftplugin/markdown.vim](../ftplugin/markdown.vim).
+    Used in [lib/vim-markdown.rb](../lib/vim-markdown.rb?self.plugins).
+    Used in [lib/vim-markdown.rb](../lib/vim-markdown.rb?self.after).
+
+    VimMarkdownMetadataPlugins is a Vim variable set
+    with a call to `ruby VimMarkdown.metadata(:Plugins)`.
+    It contains the markdown metadata value of `Plugins:` and
+    will be an empty string if the markdown file does not give this key.
+    It's used to list the Vim-Ruby plugins to require.
+
+*VIM_MARKDOWN_DIRECTORY*
+
+    :ruby print VIM_MARKDOWN_DIRECTORY
+
+    Set and used in [plugin/vim-markdown.vim](../plugin/vim-markdown.vim).
+
+    VIM_MARKDOWN_DIRECTORY is a Ruby constant.
+    It's the plugin's root directory, likely to be `~/.vim/bundle/vim-markdown`.
+    It's used to add the plugin's Ruby `lib` directory to `$LOAD_PATH`.
+
+*$LOAD_PATH*
+
+    :ruby print $LOAD_PATH
+
+    Used and amended in [plugin/vim-markdown.vim](../plugin/vim-markdown.vim)
+
+    To Ruby's `$LOAD_PATH`,
+    VimMarkdown prepends the plugin's Ruby `lib` directory and
+    the working directory's `./lib`.
+
+====================================================================
+FUNCTIONS
+
+
+*VimMarkdown.metadata*
+
+    :ruby VimMarkdown.metadata
+    :ruby VimMarkdown.metadata :Plugins
+
+    Defined in [lib/vim-markdown.rb](../lib/vim-markdown.rb?self.metadata).
+    Used in [ftplugin/markdown.vim](../ftplugin/markdown.vim).
+
+    Given some :Key in a markdown header metadata
+        ===
+        Key: Value
+        ===
+    Then
+        :ruby VimMarkdown.metadata(:Key)
+    will set a Vim variable as
+        :let VimMarkdownMetadataKey = 'Value'
+
+    Without any parameters
+        :ruby VimMarkdown.metadata
+    will set all keys/value pairs in the markdown's metadata accordingly.
+
+*VimMarkdown.plugins*
+
+    :ruby VimMarkdown.plugins
+    :exe 'ruby VimMarkdown.plugins("'.VimMarkdownMetadataPlugins.")
+
+    Defined in [lib/vim-markdown.rb](../lib/vim-markdown.rb?self.plugins).
+    Used in [ftplugin/markdown.vim](../ftplugin/markdown.vim).
+
+    Given a string with a list of Ruby plugins,
+    VimMarkdown.plugins will load (aka require) each one.
+
+*VimMarkdown.after*
+
+    :ruby VimMarkdown.after(:ftplugin)
+    :ruby VimMarkdown.after(:syntax)
+
+    Defined in [lib/vim-markdown.rb](../lib/vim-markdown.rb?self.after).
+    Used in [after/syntax/markdown.vim](../after/syntax/markdown.vim) and
+    [after/ftplugin/markdown.vim](../after/ftplugin/markdown.vim).
+
+    Allows a Vim-Ruby plugin to run code whenever a
+    `after/ftplugin/markdown.vim` or a `after/syntax/markdown.vim`
+    would have been sourced.
+    If a Vim-Ruby plugin defines an #after_ftplugin or #after_syntax
+    module function, it will be called appropriately.
+
