@@ -16,7 +16,8 @@ unless MAJOR and MINOR and BUILD
   exit 1
 end
 
-unless BUILD.start_with?(build=Time.now.strftime('%y%m%d'))
+build = File.mtime(`ls -t lib/*.rb after/*/*.vim ftplugin/*.vim plugin/*.vim | head -1`.strip).strftime('%y%m%d')
+unless BUILD.start_with? build
   puts "Unexpected BUILD(#{BUILD}) !start_with?(#{build})"
   exit 1
 end
