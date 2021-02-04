@@ -1,3 +1,4 @@
+module VimMarkdown
 module Navigation
   MARKDOWN_LINK = /\[[^\[\]]*\]\((?<link>[^\(\)]*)\)/
   HELP_TAG      = /(?<link>\|[^"*\|\s]+)\|/
@@ -71,6 +72,7 @@ module Navigation
   def self.after_ftplugin
     # vim mappings
     VIM.command "nnoremap <Backspace> <C-o>"
-    VIM.command "nnoremap <CR> :ruby Navigation.link_handler<CR>"
+    VIM.command "nnoremap <CR> :ruby VimMarkdown::Navigation.link_handler<CR>"
   end
+end
 end

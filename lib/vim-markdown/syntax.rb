@@ -1,3 +1,4 @@
+module VimMarkdown
 module Syntax
   def self.after_syntax
     # Functions
@@ -48,4 +49,5 @@ module Syntax
       'setlocal foldtext=VimMarkdownFoldText()',
     ].each{ |cmd| VIM.command cmd.strip.gsub(/\s+/, ' ') }
   end
+end
 end

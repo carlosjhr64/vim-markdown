@@ -64,7 +64,7 @@ module VimMarkdown
   def self.after(directory, plugins=VIM.evaluate("b:VimMarkdownMetadataPlugins"))
     plugins.split.each do |plugin|
       begin
-        eval "#{plugin.capitalize}.after_#{directory}"
+        eval "VimMarkdown::#{plugin.capitalize}.after_#{directory}"
       rescue NameError
         # nevermind...
       end
