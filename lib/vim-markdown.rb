@@ -54,7 +54,7 @@ module VimMarkdown
   def self.plugins(plugins=VIM.evaluate("b:VimMarkdownMetadataPlugins"))
     plugins.to_s.split.each do |plugin|
       begin
-        require plugin
+        require "vim-markdown/#{plugin}"
       rescue LoadError
         print $!
       end
