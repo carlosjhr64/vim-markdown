@@ -7,7 +7,7 @@ module VimMarkdown
   # The build number encodes the two digit year, month, and day,
   # with an additional "0" to "9" series number in case multiple commits occur
   # on the same day.
-  VERSION = '0.8.1901070'
+  VERSION = '0.8.2102040'
 
   # Note: Highly overloaded
   def self.metadata(key=nil, value=nil)
