@@ -1,7 +1,3 @@
----
-Plugins: navigation syntax  
----
-
 # (Vim-Ruby) Navigation
 
 `Navigation` is a `VimMarkdown` sub-plugin activated when
@@ -12,7 +8,7 @@ Supports:
 * Anchors to headings:
   [README.md#Installation](README.md#Installation)
 * Search string:
-  [README.md?But.more](README.md?But.more)
+  [README.md?Copyright](README.md?Copyright)
 * Url opened by linux's `xdg-open`:
   [https://github.com/carlosjhr64/](https://github.com/carlosjhr64/)
 * Help topic:

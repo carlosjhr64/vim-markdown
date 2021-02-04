@@ -27,7 +27,6 @@ CONTENTS                                               *VimMarkdown*
 
     Variables
         |VimMarkdownMetadataPlugins|
-        |VIM_MARKDOWN_DIRECTORY|
         |$LOAD_PATH|
 
     Functions
@@ -63,16 +62,6 @@ VARIABLES
     It contains the markdown metadata value of `Plugins:` and
     will be an empty string if the markdown file does not give this key.
     It's used to list the Vim-Ruby plugins to require.
-
-*VIM_MARKDOWN_DIRECTORY*
-
-    :ruby print VIM_MARKDOWN_DIRECTORY
-
-    Set and used in [plugin/vim-markdown.vim](../plugin/vim-markdown.vim).
-
-    VIM_MARKDOWN_DIRECTORY is a Ruby constant.
-    It's the plugin's root directory, likely to be `~/.vim/bundle/vim-markdown`.
-    It's used to add the plugin's Ruby `lib` directory to `$LOAD_PATH`.
 
 *$LOAD_PATH*
 

@@ -1,50 +1,27 @@
 ---
-Plugins: navigation syntax  
+Plugins: navigation syntax
 ---
+
 # WithRuby
 
 * [VERSION 0.8.2102040](https://github.com/carlosjhr64/with-ruby/releases)
 * [github](https://github.com/carlosjhr64/with-ruby)
 
-Here's my `with-ruby` plugin, henceforth `WithRuby`.
-`WithRuby` is a minimal overwrite of Vim's `markdown` to add the following features:
+## Description:
 
-* Ruby libraries in [~/.vim/bundle/with-ruby/lib/](lib)
-
-* Read markdown metadata key-value pairs.
-* Sub-plugins activated based on metadata key `Plugins:`' value.
-
-`VimMarkdown` is meant to allow one to write `Vim-Ruby` plugins for markdown files.
+`WithRuby` facilitates writting vim plugins in ruby.
 
 ## Installation
 
 Using [Pathogen](https://github.com/tpope/vim-pathogen):
+```shell
+$ cd ~/.vim/bundle
+$ git clone https://github.com/carlosjhr64/with-ruby
+```
+## Features:
 
-    cd ~/.vim/bundle
-    git clone https://github.com/carlosjhr64/vim-markdown
-
-## Usage
-
-`VimMarkdown` expects maybe a markdown metadata header like:
-
-    ---
-    Title:   The Title  
-    Author:  John Doe  
-    Plugins: navigation syntax  
-    ---
-
-The `Plugins:` metadata key should list the sub-plugins to be activated on the markdown file.
-The following Vim-Ruby plugins are available on my installation:
-
-* [navigation](NAVIGATION.md)
-* [syntax](SYNTAX.md)
-
-But more Vim-Ruby plugins can be added.
-Since `VimMarkdown` just `require`'s the plugin as named,
-the Vim-Ruby plugin can be an installed gem.
-See [`markdown.rb`](lib/vim-markdown.rb?self.plugins) to see how this happens.
-
-For help see |VimMarkdown|, `:help VimMarkdown`.
+* Adds `~/.vim/bundle/with-ruby/lib` and `./lib` to ruby's load path.
+* Includes [`VimMarkdown`](VIM_MARKDOWN.md), a minimal overwrite of Vim's `markdown`.
 
 ## LICENSE:
 

@@ -1,7 +1,3 @@
----
-Plugins: syntax navigation  
----
-
 # (Vim-Ruby) Syntax
 
 Syntax is a VimMarkdown sub-plugin activated when
