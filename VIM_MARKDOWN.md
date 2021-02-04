@@ -3,7 +3,7 @@
 * Reads markdown metadata key-value pairs as `let b:VimMarkdownMetadata#{key} = '#{value}'`.
 * Sub-plugins activated based on metadata key `Plugins:`' value.
 
-#### Usage
+## Usage
 
 `VimMarkdown` expects maybe a markdown metadata header like:
 
@@ -19,9 +19,8 @@ The following `VimMarkdown` plugins are available:
 * [navigation](NAVIGATION.md)
 * [syntax](SYNTAX.md)
 
+If not specified, `Plugins:` defaults to "navigation syntax" or as set in `g:VimMarkdownMetadataPlugins`.
 More Vim-Ruby plugins can be added.
-Since `VimMarkdown` just `require`'s the plugin as named,
-the VimMarkdown plugin can be an installed gem.
-See [`markdown.rb`](lib/vim-markdown.rb?self.plugins) to see how this happens.
+See [`markdown.rb`](lib/vim-markdown.rb?self.plugins) to see how `VimMarkdown` requires in the plugins.
 
 For help see |VimMarkdown|, `:help VimMarkdown`.
