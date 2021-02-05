@@ -13,11 +13,24 @@ Plugins: navigation syntax
 
 ## Installation
 
+Using neovim's built-in package management,
+I created a `site/plugins/start` directory and clone the git there:
+```shell
+$ mkdir -p ~/.local/share/nvim/site/pack/plugins/start
+$ cd ~/.local/share/nvim/site/pack/plugins/start
+$ git clone https://github.com/carlosjhr64/with-ruby
+```
+See neovim's `:help packages` for more info.
+There's an analogous way in vim-8 too.
+
 Using [Pathogen](https://github.com/tpope/vim-pathogen):
 ```shell
 $ cd ~/.vim/bundle
 $ git clone https://github.com/carlosjhr64/with-ruby
 ```
+But [tpope](https://github.com/tpope) recommends new users
+use their respective built-in package manager.
+
 ## Features:
 
 * Adds `~/.vim/bundle/with-ruby/lib` and `./lib` to ruby's load path.
