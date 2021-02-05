@@ -8,5 +8,3 @@ It adds the following features:
 * Conceals-ends the code delimiter
 * Conceals link's url
 * Adds help hyper text jump highlighting |bars|
-
-For help, see |SyntaxRb|, `:h SyntaxRb`.

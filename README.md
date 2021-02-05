@@ -23,6 +23,8 @@ $ git clone https://github.com/carlosjhr64/with-ruby
 * Adds `~/.vim/bundle/with-ruby/lib` and `./lib` to ruby's load path.
 * Includes [`VimMarkdown`](VIM_MARKDOWN.md), a minimal overwrite of Vim's `markdown`.
 
+For help see |WithRuby|, `:help WithRuby`.
+
 ## LICENSE:
 
 (The MIT License)

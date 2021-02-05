@@ -12,4 +12,4 @@ Supports:
 * Url opened by linux's `xdg-open`:
   [https://github.com/carlosjhr64/](https://github.com/carlosjhr64/)
 * Help topic:
-  |NavigationRb|
+  |WithRuby|
