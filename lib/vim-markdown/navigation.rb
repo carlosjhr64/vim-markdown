@@ -55,16 +55,13 @@ module Navigation
         dir = File.dirname Vim.evaluate('expand("%")') 
         file = File.expand_path File.join(dir, file)
       end
-      if File.exist? file
-        VIM.command "e +#{number} #{file}"
-        if anchor
-          Navigation.anchor anchor
-        end
-        if search
-          Navigation.search search
-        end
-      else
-        print "Not found:  #{file}"
+      file << '.md' unless /\.w+$/.match?(file) or File.exist?(file)
+      VIM.command "e +#{number} #{file}"
+      if anchor
+        Navigation.anchor anchor
+      end
+      if search
+        Navigation.search search
       end
     end
   end
