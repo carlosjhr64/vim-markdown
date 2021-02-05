@@ -10,11 +10,16 @@
 ====================================================================
 CONTENTS                                               *WithRuby*
 
-    Enviroment
-        LOAD_PATH
+  Enviroment
+    LOAD_PATH
 
-    Plugins
-        VimMarkdown
+  Plugins
+    VimMarkdown
+
+  Files
+    Documentation
+    Vim Files
+    Ruby
 
 ====================================================================
 ENVIROMENT
@@ -31,5 +36,38 @@ VimMarkdown
 
     WithRuby inludes VimMarkdown, which adds to vim's markdown
     syntax and link navigation.
+
+====================================================================
+FILES
+
+  DOCUMENTATION
+
+    [README.md](../README.md)
+    [VIM_MARKDOWN.md](../VIM_MARKDOWN.md)
+    [NAVIGATION.md](../NAVIGATION.md)
+    [SYNTAX.md](../SYNTAX.md)
+    doc/
+      with-ruby.txt
+
+  VIM FILES
+
+    plugin/
+      [with-ruby.vim](../plugin/with-ruby.vim)
+    ftplugin/
+      [markdown.vim](../ftplugin/markdown.vim)
+    after/
+      ftplugin/
+        [markdown.vim](../after/ftplugin/markdown.vim)
+      syntax/
+        [markdown.vim](../after/syntax/markdown.vim)
+        [help.vim](../after/syntax/help.vim)
+
+  RUBY
+
+    lib/
+      [vim-markdown.rb](../lib/vim-markdown.rb)
+      vim-markdown/
+        [navigation.rb](../lib/vim-markdown/navigation.rb)
+        [syntax.rb](../lib/vim-markdown/syntax.rb)
 
 ====================================================================
