@@ -1,5 +1,5 @@
 
- \ \        / (_) | | |   |  __ \     | |                          ~
+ \ \        / ( ) | | |   |  __ \     | |                          ~
   \ \  /\  / / _| |_| |__ | |__) |   _| |__  _   _                 ~
    \ \/  \/ / | | __| '_ \|  _  / | | | '_ \| | | |                ~
     \  /\  /  | | |_| | | | | \ \ |_| | |_) | |_| |                ~
@@ -10,16 +10,21 @@
 ====================================================================
 CONTENTS                                               *WithRuby*
 
-  Enviroment
+  ENVIROMENT
     LOAD_PATH
 
-  Plugins
+  PLUGINS
     VimMarkdown
 
-  Files
-    Documentation
-    Vim Files
-    Ruby
+  FILES
+    Markdowns
+    Vims
+    Docs
+    Rubys
+    Tests
+    Lexicons
+    Fishs
+    Gits
 
 ====================================================================
 ENVIROMENT
@@ -40,7 +45,7 @@ VimMarkdown
 ====================================================================
 FILES
 
-  DOCUMENTATION
+  Markdowns
 
     [README.md](../README.md)
     [VIM_MARKDOWN.md](../VIM_MARKDOWN.md)
@@ -49,7 +54,7 @@ FILES
     doc/
       with-ruby.txt
 
-  VIM FILES
+  Vims
 
     plugin/
       [with-ruby.vim](../plugin/with-ruby.vim)
@@ -62,12 +67,46 @@ FILES
         [markdown.vim](../after/syntax/markdown.vim)
         [help.vim](../after/syntax/help.vim)
 
-  RUBY
+  Docs
 
+    doc/
+      [tags](../doc/tags)
+      with-ruby.txt
+
+  Rubys
+
+    [.ruby-version](../.ruby-version)
+    [.irbrc](../.irbrc)
     lib/
       [vim-markdown.rb](../lib/vim-markdown.rb)
       vim-markdown/
         [navigation.rb](../lib/vim-markdown/navigation.rb)
         [syntax.rb](../lib/vim-markdown/syntax.rb)
+
+  Tests
+
+    test/
+      [tc_version](../test/tc_version)
+      [tc_readme_rocket_check](../test/tc_readme_rocket_check)
+      [tc_lexicon](../test/tc_lexicon)
+      [tc_files](../test/tc_files)
+
+  Lexicons
+
+    [.lexicon](../.lexicon)
+    [.dictionary](../.dictionary)
+
+  Fishs
+
+These just sets up [fish](https://fishshell.com/) via [fisher](https://github.com/jorgebucaran/fisher)'s
+[pkg-goto](https://github.com/carlosjhr64/pkg-goto) and [theme-local](https://github.com/carlosjhr64/theme-local).
+
+    [.greeting](../.greeting)
+    [.prompt](../.prompt)
+    [.config.fish](../.config.fish)
+
+  Gits
+
+    [.gitignore](../.gitignore)
 
 ====================================================================

@@ -1,0 +1,27 @@
+#! ruby
+require 'test/unit'
+
+class TestFiles < Test::Unit::TestCase
+  def test_files
+    # Ensure I reference all relevant files in doc/with-ruby.txt.
+    files = `find . -type f | egrep -v '^(./.git/)|(./tmp/)'`.split.map{_1.gsub(/^\.\//,'')}
+    files.delete('TODO.txt')
+    files.delete('doc/with-ruby.txt')
+    refs = File.read('doc/with-ruby.txt').scan(%r{[(][\w./-]+[)]}).map{_1[1...-1].sub(/^\.\.\//,'')}
+    refs.delete_if{/^https?:/.match? _1}
+    count = 0
+    refs.each do |ref|
+      unless files.include? ref
+        count += 1
+        $stderr.puts "Mentioned not in project: #{ref}"
+      end
+    end
+    files.each do |file|
+      unless refs.include? file
+        count += 1
+        $stderr.puts "Not mentioned: #{file}"
+      end
+    end
+    assert_equal 0, count
+  end
+end
