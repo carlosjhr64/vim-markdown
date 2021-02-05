@@ -1,4 +1,4 @@
-# (Vim-Ruby) Syntax
+# VimMarkdown::Syntax
 
 Syntax is a VimMarkdown sub-plugin activated when
 the markdown's metadata key `Plugins:` contains the string `"syntax"`.

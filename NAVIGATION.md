@@ -1,4 +1,4 @@
-# (Vim-Ruby) Navigation
+# VimMarkdown::Navigation
 
 `Navigation` is a `VimMarkdown` sub-plugin activated when
 the markdown's metadata key `Plugins:` contains the string `"navigation"`.
