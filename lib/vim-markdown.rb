@@ -1,13 +1,6 @@
 # VimMarkdown is loaded into VIM when user opens a markdown file.
 module VimMarkdown
-  # VERSION is semantic with major, minor, and build numbers.
-  # On breaking changes, I'll bump up the major number.
-  # The minor number currently encodes the number of module methods,
-  # but that might change.
-  # The build number encodes the two digit year, month, and day,
-  # with an additional "0" to "9" series number in case multiple commits occur
-  # on the same day.
-  VERSION = '0.8.2102040'
+  VERSION = '1.0.210205'
 
   # Note: Highly overloaded
   def self.metadata(key=nil, value=nil)

@@ -9,7 +9,7 @@ Supports:
   [README.md#Installation](README.md#Installation)
 * Search string:
   [README.md?Copyright](README.md?Copyright)
-* Url opened by linux's `xdg-open`:
+* URL opened by linux's `xdg-open`:
   [https://github.com/carlosjhr64/](https://github.com/carlosjhr64/)
 * Help topic:
   |WithRuby|

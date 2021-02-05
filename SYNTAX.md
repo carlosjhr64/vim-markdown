@@ -6,5 +6,5 @@ It adds the following features:
 
 * Folds the markdown's metadata header
 * Conceals-ends the code delimiter
-* Conceals link's url
+* Conceals link's URL
 * Adds help hyper text jump highlighting |bars|
