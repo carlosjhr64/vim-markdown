@@ -4,7 +4,8 @@ module Navigation
   HELP_TAG      = /(?<link>\|[^"*\|\s]+)\|/
 
   def self.anchor(heading)
-    VIM.command "/^\\s*#\\+\\s*#{heading}"
+    # Note that github uses '-' for spaces
+    VIM.command "/^\\s*#\\+\\s*#{heading.gsub('-','\s')}"
     VIM.command "noh"
   end
 
@@ -55,7 +56,7 @@ module Navigation
         dir = File.dirname Vim.evaluate('expand("%")') 
         file = File.expand_path File.join(dir, file)
       end
-      file << '.md' unless /\.w+$/.match?(file) or File.exist?(file)
+      file << '.md' unless /\.\w+$/.match?(file) or File.exist?(file)
       VIM.command "e +#{number} #{file}"
       if anchor
         Navigation.anchor anchor
