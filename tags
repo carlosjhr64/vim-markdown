@@ -1,0 +1,19 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Navigation	lib/vim-markdown/navigation.rb	/^module Navigation$/;"	m	class:VimMarkdown
+Syntax	lib/vim-markdown/syntax.rb	/^module Syntax$/;"	m	class:VimMarkdown
+VimMarkdown	lib/vim-markdown.rb	/^module VimMarkdown$/;"	m
+VimMarkdown	lib/vim-markdown/navigation.rb	/^module VimMarkdown$/;"	m
+VimMarkdown	lib/vim-markdown/syntax.rb	/^module VimMarkdown$/;"	m
+after	lib/vim-markdown.rb	/^  def self.after(directory, plugins=VIM.evaluate("b:VimMarkdownMetadataPlugins"))$/;"	F	class:VimMarkdown
+after_ftplugin	lib/vim-markdown/navigation.rb	/^  def self.after_ftplugin$/;"	F	class:VimMarkdown.Navigation
+after_syntax	lib/vim-markdown/syntax.rb	/^  def self.after_syntax$/;"	F	class:VimMarkdown.Syntax
+anchor	lib/vim-markdown/navigation.rb	/^  def self.anchor(heading)$/;"	F	class:VimMarkdown.Navigation
+link_handler	lib/vim-markdown/navigation.rb	/^  def self.link_handler(link = nil)$/;"	F	class:VimMarkdown.Navigation
+metadata	lib/vim-markdown.rb	/^  def self.metadata(key=nil, value=nil)$/;"	F	class:VimMarkdown
+plugins	lib/vim-markdown.rb	/^  def self.plugins(plugins=VIM.evaluate("b:VimMarkdownMetadataPlugins"))$/;"	F	class:VimMarkdown
+search	lib/vim-markdown/navigation.rb	/^  def self.search(string)$/;"	F	class:VimMarkdown.Navigation

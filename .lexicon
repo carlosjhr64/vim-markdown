@@ -7,7 +7,6 @@ b
 block_given
 Buffer
 capitalize
-cmd
 col
 column
 command
@@ -25,7 +24,6 @@ file
 File
 foldend
 foldstart
-func
 gsub
 heading
 HELP_TAG

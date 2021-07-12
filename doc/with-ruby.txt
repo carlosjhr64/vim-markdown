@@ -68,6 +68,7 @@ FILES
 
   Docs
 
+    [tags](../tags)
     doc/
       [tags](../doc/tags)
       with-ruby.txt
