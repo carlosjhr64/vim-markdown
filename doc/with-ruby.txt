@@ -32,7 +32,7 @@ ENVIROMENT
 LOAD_PATH
 
     Ruby load path is set to start with
-    ['./lib', '~/.vim/bundle/with-ruby/lib'].
+    ['./lib', '~/path-to/with-ruby/lib'].
 
 ====================================================================
 PLUGINS
@@ -65,7 +65,6 @@ FILES
         [markdown.vim](../after/ftplugin/markdown.vim)
       syntax/
         [markdown.vim](../after/syntax/markdown.vim)
-        [help.vim](../after/syntax/help.vim)
 
   Docs
 
