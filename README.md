@@ -4,7 +4,7 @@ Plugins: navigation syntax
 
 # WithRuby
 
-* [VERSION 1.0.210220](https://github.com/carlosjhr64/with-ruby/releases)
+* [VERSION 2.0.210712](https://github.com/carlosjhr64/with-ruby/releases)
 * [github](https://github.com/carlosjhr64/with-ruby)
 
 ## Description:
@@ -13,28 +13,33 @@ Plugins: navigation syntax
 
 ## Installation
 
-Using neovim's built-in package management,
-I created a `site/plugins/start` directory and clone the git there:
+### Via vim-plug
+
+Using [Vim-Plug](https://github.com/junegunn/vim-plug),
+add to your `~/.config/nvim/init.vim`:
+```vim
+" The following has my suggested vim-plug directory, but use your's:
+call plug#begin('~/.local/share/nvim/site/pack/vim-plug')
+" Maybe other people's plugs...
+Plug 'carlosjhr64/with-ruby'
+" and maybe other people's plugs...
+call plug#end()
+```
+### Via git clone
+
+Create a `site/pack/bundle/start` directory(or wherever you bundles are) and clone the git there:
 ```shell
-$ mkdir -p ~/.local/share/nvim/site/pack/plugins/start
-$ cd ~/.local/share/nvim/site/pack/plugins/start
+$ mkdir -p ~/.local/share/nvim/site/pack/bundle/start
+$ cd ~/.local/share/nvim/site/pack/bundle/start
 $ git clone https://github.com/carlosjhr64/with-ruby
 ```
 See neovim's `:help packages` for more info.
 There's an analogous way in vim-8 too.
 
-Using [Pathogen](https://github.com/tpope/vim-pathogen):
-```shell
-$ cd ~/.vim/bundle
-$ git clone https://github.com/carlosjhr64/with-ruby
-```
-But [tpope](https://github.com/tpope) recommends new users
-use their respective built-in package manager.
-
 ## Features:
 
-* Adds `~/.vim/bundle/with-ruby/lib` and `./lib` to ruby's load path.
-* Includes [`VimMarkdown`](VIM_MARKDOWN.md), a minimal overwrite of Vim's `markdown`.
+* Adds `with-ruby/lib` and `./lib` to ruby's load path.
+* Includes [`VimMarkdown`](VIM_MARKDOWN.md) for added features on `markdown` files.
 
 For help see |WithRuby|, `:help WithRuby`.
 
