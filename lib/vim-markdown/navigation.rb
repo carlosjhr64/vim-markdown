@@ -64,6 +64,19 @@ module Navigation
       if search
         Navigation.search search
       end
+    else
+      VIM.command %q{
+        let cword = expand('<cword>')
+        try
+          execute 'tag '.cword
+        catch
+          try
+            execute 'help '.cword
+          catch
+            echo 'Nothing linked to "'.cword.'".'
+          endtry
+        endtry
+      }
     end
   end
 
